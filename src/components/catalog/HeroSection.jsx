@@ -45,16 +45,38 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative">
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl">
-              <img
-                src="https://www.intimac.it/_next/image/?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F290336016608659%2F3008x2000%2Fa05e787648%2Fintimacmachinebottlecapper.jpg%2Fm%2F840x0%2Ffilters%3Aformat(webp)&w=1920&q=75"
-                alt="Intimac machinery"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-background/80 text-sm font-medium">A Foeth Company</p>
-                <p className="text-background text-lg font-semibold">30+ Years of Excellence</p>
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-2xl bg-gradient-to-br from-background/10 to-background/5 border border-background/10 p-8 flex flex-col justify-between">
+              {/* Grid pattern */}
+              <div className="absolute inset-0 opacity-[0.04]" style={{backgroundImage:`url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M0 0h1v40H0zm39 0h1v40h-1zM0 0v1h40V0zm0 39v1h40v-1z'/%3E%3C/g%3E%3C/svg%3E")`}} />
+
+              {/* Decorative circles */}
+              <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-primary/10 blur-3xl" />
+              <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-primary/10 blur-3xl" />
+
+              {/* Top: label */}
+              <div className="relative flex items-center justify-between">
+                <span className="text-xs font-semibold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">Medicom Group</span>
+                <span className="text-background/40 text-xs">UAE · Ajman Free Zone</span>
+              </div>
+
+              {/* Middle: big stat */}
+              <div className="relative text-center py-4">
+                <p className="text-8xl font-display font-bold text-background/10 select-none leading-none">329</p>
+                <p className="text-background/80 text-sm font-medium -mt-6">machines in catalog</p>
+              </div>
+
+              {/* Bottom: 3 metrics */}
+              <div className="relative grid grid-cols-3 gap-3">
+                {[
+                  { value: "30+", label: "Years" },
+                  { value: "750+", label: "In Stock" },
+                  { value: "46,997t", label: "CO₂ Saved" },
+                ].map((s) => (
+                  <div key={s.label} className="bg-background/5 border border-background/10 rounded-xl p-3 text-center">
+                    <p className="text-lg font-bold text-primary">{s.value}</p>
+                    <p className="text-background/50 text-xs">{s.label}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
