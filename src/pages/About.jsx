@@ -67,8 +67,8 @@ export default function About() {
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
               <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
                 <img
-                  src="https://www.intimac.it/_next/image/?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F290336016608659%2F3008x2000%2Fa05e787648%2Fintimacmachinebottlecapper.jpg%2Fm%2F840x0%2Ffilters%3Aformat(webp)&w=1920&q=75"
-                  alt="Intimac facility"
+                  src={`${import.meta.env.BASE_URL}hero-machine.webp`}
+                  alt="Medicom pharmaceutical machinery"
                   className="w-full h-full object-cover"
                 />
               </div>
