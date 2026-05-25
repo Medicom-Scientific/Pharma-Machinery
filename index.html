@@ -4,7 +4,19 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intimac — Machinery Catalog</title>
+    <title>Medicom — Machinery Catalog</title>
+    <script>
+      // Handle redirects from 404.html for React Router
+      (function() {
+        var p = window.location.search.match(/[?&]p=([^&]*)/);
+        if (p) {
+          var path = decodeURIComponent(p[1]);
+          var h = window.location.search.match(/[?&]h=([^&]*)/);
+          var hash = h ? '#' + decodeURIComponent(h[1]) : '';
+          window.history.replaceState(null, null, '/Pharma-Machinery/' + path + hash);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

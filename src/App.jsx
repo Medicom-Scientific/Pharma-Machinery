@@ -9,6 +9,8 @@ import Contact from './pages/Contact';
 import { QuoteProvider } from './context/QuoteContext';
 import QuoteDrawer from './components/quote/QuoteDrawer';
 
+const basename = import.meta.env.DEV ? '/' : '/Pharma-Machinery';
+
 function PageNotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center">
@@ -16,7 +18,7 @@ function PageNotFound() {
         <h1 className="text-7xl font-light text-slate-300">404</h1>
         <h2 className="text-2xl font-medium text-slate-800 mt-4">Page Not Found</h2>
         <button
-          onClick={() => window.location.href = '/'}
+          onClick={() => window.location.href = basename + '/'}
           className="mt-6 px-4 py-2 text-sm border border-slate-200 rounded-lg hover:bg-slate-50"
         >
           Go Home
@@ -29,7 +31,7 @@ function PageNotFound() {
 export default function App() {
   return (
     <QuoteProvider>
-      <Router>
+      <Router basename={basename}>
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Home />} />
