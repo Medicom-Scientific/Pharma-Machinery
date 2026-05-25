@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 import { QuoteProvider } from './context/QuoteContext';
 import QuoteDrawer from './components/quote/QuoteDrawer';
 
-const basename = import.meta.env.DEV ? '/' : '/Pharma-Machinery';
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
 
 function PageNotFound() {
   return (
