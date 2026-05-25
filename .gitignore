@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables (contains API keys - never commit this)
+.env
+.env.local
+.env.*.local
+
+# Claude Code config
+.claude/
+
+# Editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp files
+*.cjs
+_new*.js
