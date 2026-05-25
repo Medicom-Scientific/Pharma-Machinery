@@ -7,7 +7,7 @@ import { useQuote } from "@/context/QuoteContext";
 
 function MedicomLogo({ className }) {
   return (
-    <img src="/medicom-logo.png" alt="Medicom Group" className={className} />
+    <img src={`${import.meta.env.BASE_URL}medicom-logo.png`} alt="Medicom Group" className={className} />
   );
 }
 
