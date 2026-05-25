@@ -86,7 +86,7 @@ export default function Home() {
                 A Second Life for Pharma & Process Machinery
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                At Intimac, sustainability is built into the way we do business. By extending the life of high-quality process and packaging machinery, we help prevent unnecessary new production and reduce waste.
+                At Medicom, sustainability is built into the way we do business. By extending the life of high-quality process and packaging machinery, we help prevent unnecessary new production and reduce waste.
               </p>
               <div className="space-y-3 mb-8">
                 {[
@@ -116,8 +116,8 @@ export default function Home() {
             >
               <div className="rounded-2xl overflow-hidden aspect-square shadow-2xl">
                 <img
-                  src="https://www.intimac.it/_next/image/?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F290336016608659%2F3008x2000%2Fa05e787648%2Fintimacmachinebottlecapper.jpg%2Fm%2F0x350%2Fsmart%2Ffilters%3Aformat(webp)&w=3840&q=75"
-                  alt="Intimac sustainability"
+                  src={`${import.meta.env.BASE_URL}hero-machine.webp`}
+                  alt="Medicom pharmaceutical machinery"
                   className="w-full h-full object-cover"
                 />
               </div>
