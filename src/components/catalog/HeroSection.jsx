@@ -37,7 +37,7 @@ export default function HeroSection() {
                 </Button>
               </Link>
               <Link to="/categories">
-                <Button size="lg" variant="outline" className="border-background/20 text-background hover:bg-background/10 w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="bg-transparent border-white/40 text-white hover:bg-white/10 hover:text-white w-full sm:w-auto">
                   View Categories
                 </Button>
               </Link>
